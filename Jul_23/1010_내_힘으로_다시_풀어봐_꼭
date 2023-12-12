@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+
+// dp 사용해서 내 힘으로 다시 꼭 풀어보기
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/*
+unsigned int bridge[31][31] = {
+    0,
+};
+
+int main() {
+  int n, m, t;
+  cin >> t;
+  int k = 1;
+
+  while (t--) {
+    cin >> n >> m;
+    for (int i = 1; i <= m; i++) {
+      bridge[1][i] = i;
+    }
+    for (int i = 2; i <= n; i++) {
+      for (int j = 1; j <= m; j++) {
+        for (int k = 1; k <= j - 1; k++) {
+          bridge[i][j] += bridge[i - 1][k];
+        }
+      }
+    }
+    cout << bridge[n][m] << '\n';
+  }
+
+  return 0;
+}
+*/
