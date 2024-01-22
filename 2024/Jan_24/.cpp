@@ -1,17 +1,20 @@
 #include <algorithm>
 #include <iostream>
-#include <vector>
 
 using namespace std;
+
+int fac(int n) {
+  if (n > 1)
+    return fac(n - 1) * n;
+  else
+    return 1;
+}
 
 int main() {
   int n;
   cin >> n;
 
-  if (n % 2 == 1) {
-    cout << "0\n";
-    return 0;
-  }
+  cout << fac(n) << endl;
 
   return 0;
 }
