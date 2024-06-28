@@ -1,0 +1,122 @@
+CREATE TABLE `User` (
+	`id`	bigint	NOT NULL,
+	`name`	VARCHAR(255)	NULL,
+	`gender`	int	NULL,
+	`birth_date`	int	NULL,
+	`address`	varchar(50)	NULL,
+	`phone_num`	bigint	NULL,
+	`email`	varchar(30)	NULL,
+	`point`	int	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL,
+	`status`	varchar(15)	NULL,
+	`inactive_date`	datetime	NULL
+);
+
+CREATE TABLE `review` (
+	`id`	bigint	NOT NULL,
+	`user_id`	bigint	NOT NULL,
+	`stars`	float	NULL,
+	`review_body`	text	NULL,
+	`image`	text	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `mission` (
+	`id`	bigint	NOT NULL,
+	`restaurant_id`	bigint	NOT NULL,
+	`user_id`	bigint	NOT NULL,
+	`points_reward`	int	NULL,
+	`mission_body`	text	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `restaurant` (
+	`id`	bigint	NOT NULL,
+	`restaurant_category_id`	bigint	NOT NULL,
+	`review_id`	bigint	NOT NULL,
+	`restaurant_name`	varchar(20)	NULL,
+	`description`	text	NULL,
+	`address`	varchar(50)	NULL,
+	`restaurant_stars`	float	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `restaurant_category` (
+	`id`	bigint	NOT NULL,
+	`category_name`	varchar(20)	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `preference` (
+	`id`	bigint	NOT NULL,
+	`user_id`	bigint	NOT NULL,
+	`food_id`	bigint	NOT NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `food` (
+	`id`	bigint	NOT NULL,
+	`name`	varchar(20)	NULL,
+	`description`	text	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `food_category` (
+	`id`	bigint	NOT NULL,
+	`food_id`	bigint	NOT NULL,
+	`name`	varchar(20)	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+CREATE TABLE `sign_up_user` (
+	`id`	bigint	NOT NULL,
+	`user_id`	bigint	NOT NULL,
+	`term`	int	NULL,
+	`created_at`	datetime(6)	NULL,
+	`updated_at`	datetime(6)	NULL
+);
+
+ALTER TABLE `User` ADD CONSTRAINT `PK_USER` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `review` ADD CONSTRAINT `PK_REVIEW` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `mission` ADD CONSTRAINT `PK_MISSION` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `restaurant` ADD CONSTRAINT `PK_RESTAURANT` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `restaurant_category` ADD CONSTRAINT `PK_RESTAURANT_CATEGORY` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `preference` ADD CONSTRAINT `PK_PREFERENCE` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `food` ADD CONSTRAINT `PK_FOOD` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `food_category` ADD CONSTRAINT `PK_FOOD_CATEGORY` PRIMARY KEY (
+	`id`
+);
+
+ALTER TABLE `sign_up_user` ADD CONSTRAINT `PK_SIGN_UP_USER` PRIMARY KEY (
+	`id`
+);
+
