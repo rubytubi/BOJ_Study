@@ -49,4 +49,15 @@ int main()
     for (int i = 1; i <= n; i++)
     {
         for (int j = 1; j <= n; j++)
-     
+        {
+            cin >> arr[i][j];
+        }
+    }
+
+    check(1, 1, n);
+
+    cout << white << "\n"
+         << blue << "\n";
+
+    return 0;
+}
