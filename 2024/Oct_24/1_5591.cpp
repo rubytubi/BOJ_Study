@@ -25,4 +25,10 @@ int main()
     for (int i = k; i < n; i++)
     {
         sum = sum - arr[i - k] + arr[i];
-       
+        ret = max(ret, sum);
+    }
+
+    cout << ret << "\n";
+
+    return 0;
+}

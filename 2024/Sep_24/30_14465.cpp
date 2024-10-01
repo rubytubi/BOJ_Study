@@ -28,4 +28,11 @@ int main()
 
     for (int i = k + 1; i <= n; i++)
     {
-   
+        sum = sum - arr[i - k] + arr[i];
+        ans = min(ans, sum);
+    }
+
+    cout << ans << "\n";
+
+    return 0;
+}
