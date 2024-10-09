@@ -46,4 +46,5 @@ int main()
 
     cout << ans << "\n";
 
-    re
+    return 0;
+}

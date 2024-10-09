@@ -34,4 +34,11 @@ int main()
             }
         }
 
-     
+        if (flag)
+            cnt++;
+    }
+
+    cout << cnt << "\n";
+
+    return 0;
+}
