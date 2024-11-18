@@ -1,21 +1,20 @@
 #include <cstring>
 #include <iostream>
+
 using namespace std;
 
+int cnt;
+
 int main() {
-  int ans = 0, n;
-  cin >> n;
+  string str = "";
+  cin >> str;
 
-  while (n--) {
-    string s;
-    cin >> s;
-
-    if (s.find("01") < s.size() || s.find("OI") < s.size()) {
-      ans++;
-    }
+  for (int i = 0; i < str.size(); i++) {
+    if (str[i] == 'A')
+      cnt++;
   }
 
-  cout << ans << "\n";
+  cout << cnt << " : " << str.size() - cnt << "\n";
 
   return 0;
 }
